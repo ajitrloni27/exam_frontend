@@ -40,18 +40,12 @@ and hobbies.
 <div class="container">
 <h2>User Form</h2>
 
-<fieldset>
-    <legend>Gender</legend>
-    <input type="radio" name="gender" value="Male"> Male <br>
-    <input type="radio" name="gender" value="Female"> Female
-</fieldset>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
 
-<fieldset>
-    <legend>Hobbies</legend>
-    <input type="checkbox" name="hobby" value="Reading"> Reading <br>
-    <input type="checkbox" name="hobby" value="Music"> Music <br>
-    <input type="checkbox" name="hobby" value="Sports"> Sports
-</fieldset>
+<input type="checkbox" name="hobby" value="Reading"> Reading
+<input type="checkbox" name="hobby" value="Music"> Music
+<input type="checkbox" name="hobby" value="Sports"> Sports
 
 <button onclick="show()">Submit</button>
 <div id="output"></div>
