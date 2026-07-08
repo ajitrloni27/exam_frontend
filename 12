@@ -1,1 +1,106 @@
+Design a styled HTML page with:
+• A drop-down menu (pull-down) to select a color
+• A list box to select a fruit
+• An area to display the selected values
+Use JavaScript event handlers and listeners to update the output dynamically
+when the user selects a color or fruit. 
 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 12</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: lightgray;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            background: white;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        #output {
+            border: 1px solid black;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Choose a Color and Fruit</h2>
+
+    <label>Select a Color:</label>
+    <select id="colorSelect">
+        <option value="">--Select Color--</option>
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+    </select>
+
+    <label>Select a Fruit:</label>
+    <select id="fruitList" size="4">
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Mango</option>
+        <option>Orange</option>
+    </select>
+
+    <div id="output">Your selection will appear here.</div>
+
+</div>
+
+<script>
+
+window.onload = function () {
+
+    let color = document.getElementById("colorSelect");
+    let fruit = document.getElementById("fruitList");
+    let output = document.getElementById("output");
+
+    color.onchange = show;
+    fruit.onchange = show;
+
+    function show() {
+
+        let selectedColor = color.value;
+        let selectedFruit = fruit.value;
+
+        if (selectedColor != "" && selectedFruit != "") {
+            output.innerHTML = "Selected Color: " + selectedColor +
+                               "<br>Selected Fruit: " + selectedFruit;
+        }
+        else if (selectedColor != "") {
+            output.innerHTML = "Selected Color: " + selectedColor;
+        }
+        else if (selectedFruit != "") {
+            output.innerHTML = "Selected Fruit: " + selectedFruit;
+        }
+        else {
+            output.innerHTML = "Please select a color and a fruit.";
+        }
+
+    }
+
+};
+
+</script>
+
+</body>
+</html>
