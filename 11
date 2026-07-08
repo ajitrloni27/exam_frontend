@@ -37,36 +37,28 @@ and hobbies.
 </head>
 
 <body>
-
 <div class="container">
-
 <h2>User Form</h2>
 
 <fieldset>
     <legend>Gender</legend>
-
     <input type="radio" name="gender" value="Male"> Male <br>
     <input type="radio" name="gender" value="Female"> Female
 </fieldset>
 
 <fieldset>
     <legend>Hobbies</legend>
-
     <input type="checkbox" name="hobby" value="Reading"> Reading <br>
     <input type="checkbox" name="hobby" value="Music"> Music <br>
     <input type="checkbox" name="hobby" value="Sports"> Sports
 </fieldset>
 
 <button onclick="show()">Submit</button>
-
 <div id="output"></div>
-
 </div>
 
 <script>
-
 function show() {
-
     let gender = document.getElementsByName("gender");
     let hobby = document.getElementsByName("hobby");
     let output = document.getElementById("output");
@@ -79,20 +71,16 @@ function show() {
             g = gender[i].value;
         }
     }
-
     for (let i = 0; i < hobby.length; i++) {
         if (hobby[i].checked) {
             h = h + hobby[i].value + " ";
         }
     }
-
     output.innerHTML =
         "Selected Gender: " + g +
         "<br>Selected Hobbies: " + h;
 
 }
-
 </script>
-
 </body>
 </html>
