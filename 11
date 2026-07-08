@@ -37,55 +37,61 @@ and hobbies.
 </head>
 
 <body>
+
 <div class="container">
+
 <h2>User Form</h2>
-<form>
+
 <fieldset>
-<legend>Gender</legend>
-<input type="radio" name="gender" value="Male"> Male <br>
-<input type="radio" name="gender" value="Female"> Female <br>
-<input type="radio" name="gender" value="Other"> Other
+    <legend>Gender</legend>
+
+    <input type="radio" name="gender" value="Male"> Male <br>
+    <input type="radio" name="gender" value="Female"> Female
 </fieldset>
 
 <fieldset>
-<legend>Hobbies</legend>
-<input type="checkbox" name="hobby" value="Reading"> Reading <br>
-<input type="checkbox" name="hobby" value="Music"> Music <br>
-<input type="checkbox" name="hobby" value="Sports"> Sports <br>
-<input type="checkbox" name="hobby" value="Travel"> Travel
+    <legend>Hobbies</legend>
+
+    <input type="checkbox" name="hobby" value="Reading"> Reading <br>
+    <input type="checkbox" name="hobby" value="Music"> Music <br>
+    <input type="checkbox" name="hobby" value="Sports"> Sports
 </fieldset>
 
-<input type="button" value="Submit" onclick="show()">
-</form>
+<button onclick="show()">Submit</button>
 
 <div id="output"></div>
+
 </div>
 
-
 <script>
+
 function show() {
+
     let gender = document.getElementsByName("gender");
     let hobby = document.getElementsByName("hobby");
     let output = document.getElementById("output");
-    let selectedGender = "";
-    let selectedHobby = "";
-    // Gender
+
+    let g = "";
+    let h = "";
+
     for (let i = 0; i < gender.length; i++) {
         if (gender[i].checked) {
-            selectedGender = gender[i].value;
+            g = gender[i].value;
         }
     }
-    // Hobbies
+
     for (let i = 0; i < hobby.length; i++) {
         if (hobby[i].checked) {
-            selectedHobby += hobby[i].value + " ";
+            h = h + hobby[i].value + " ";
         }
     }
+
     output.innerHTML =
-        "Selected Gender: " + selectedGender +
-        "<br>Selected Hobbies: " + selectedHobby;
+        "Selected Gender: " + g +
+        "<br>Selected Hobbies: " + h;
 
 }
+
 </script>
 
 </body>
