@@ -1,1 +1,107 @@
+10. Develop an HTML page with JavaScript to: 
+        • Take a number (1–10) as input, 
+        • Display the Fibonacci series using a while loop,
+        • Display the factorial using a do-while loop,
+        • Validate the input and show the output in a styled section. 
+      Use external JavaScript and apply basic CSS styling.
 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 10</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: lightgray;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Fibonacci and Factorial</h2>
+
+Enter Number (1-10):
+
+<input type="number" id="num">
+
+<button onclick="show()">Submit</button>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+function show() {
+
+    let n = Number(document.getElementById("num").value);
+    let output = document.getElementById("output");
+
+    if (n < 1 || n > 10) {
+        output.innerHTML = "Enter a number between 1 and 10";
+        return;
+    }
+
+    // Fibonacci using while loop
+    let a = 0;
+    let b = 1;
+    let i = 1;
+    let fib = "";
+
+    while (i <= n) {
+        fib = fib + a + " ";
+        let c = a + b;
+        a = b;
+        b = c;
+        i++;
+    }
+
+    // Factorial using do-while loop
+    let fact = 1;
+    let j = 1;
+
+    do {
+        fact = fact * j;
+        j++;
+    } while (j <= n);
+
+    output.innerHTML =
+        "Fibonacci: " + fib +
+        "<br>Factorial: " + fact;
+
+}
+
+</script>
+
+</body>
+</html>
