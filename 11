@@ -1,1 +1,108 @@
+Create a styled HTML form using <fieldset> and <legend> that includes:
+• Radio buttons for gender selection
+• Checkboxes for selecting hobbies
+On clicking Submit, use JavaScript and a for loop to display the selected gender
+and hobbies.
 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program 13</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: lightgray;
+        }
+
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid black;
+        }
+
+        fieldset {
+            margin-bottom: 10px;
+        }
+
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>User Form</h2>
+
+<form>
+
+<fieldset>
+<legend>Gender</legend>
+
+<input type="radio" name="gender" value="Male"> Male <br>
+<input type="radio" name="gender" value="Female"> Female <br>
+<input type="radio" name="gender" value="Other"> Other
+
+</fieldset>
+
+<fieldset>
+<legend>Hobbies</legend>
+
+<input type="checkbox" name="hobby" value="Reading"> Reading <br>
+<input type="checkbox" name="hobby" value="Music"> Music <br>
+<input type="checkbox" name="hobby" value="Sports"> Sports <br>
+<input type="checkbox" name="hobby" value="Travel"> Travel
+
+</fieldset>
+
+<input type="button" value="Submit" onclick="show()">
+
+</form>
+
+<div id="output"></div>
+
+</div>
+
+<script>
+
+function show() {
+
+    let gender = document.getElementsByName("gender");
+    let hobby = document.getElementsByName("hobby");
+    let output = document.getElementById("output");
+
+    let selectedGender = "";
+    let selectedHobby = "";
+
+    // Gender
+    for (let i = 0; i < gender.length; i++) {
+        if (gender[i].checked) {
+            selectedGender = gender[i].value;
+        }
+    }
+
+    // Hobbies
+    for (let i = 0; i < hobby.length; i++) {
+        if (hobby[i].checked) {
+            selectedHobby += hobby[i].value + " ";
+        }
+    }
+
+    output.innerHTML =
+        "Selected Gender: " + selectedGender +
+        "<br>Selected Hobbies: " + selectedHobby;
+
+}
+
+</script>
+
+</body>
+</html>
