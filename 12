@@ -64,29 +64,22 @@ when the user selects a color or fruit.
 
 <script>
 window.onload = function () {
+
     let color = document.getElementById("colorSelect");
     let fruit = document.getElementById("fruitList");
     let output = document.getElementById("output");
+
     color.onchange = show;
     fruit.onchange = show;
 
     function show() {
-        let selectedColor = color.value;
-        let selectedFruit = fruit.value;
-        if (selectedColor != "" && selectedFruit != "") {
-            output.innerHTML = "Selected Color: " + selectedColor +
-                               "<br>Selected Fruit: " + selectedFruit;
-        }
-        else if (selectedColor != "") {
-            output.innerHTML = "Selected Color: " + selectedColor;
-        }
-        else if (selectedFruit != "") {
-            output.innerHTML = "Selected Fruit: " + selectedFruit;
-        }
-        else {
-            output.innerHTML = "Please select a color and a fruit.";
-        }
+
+        output.innerHTML =
+            "Selected Color: " + color.value +
+            "<br>Selected Fruit: " + fruit.value;
+
     }
+
 };
 </script>
 
