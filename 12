@@ -41,13 +41,11 @@ when the user selects a color or fruit.
 </head>
 
 <body>
-
 <div class="container">
-
     <h2>Choose a Color and Fruit</h2>
-
     <label>Select a Color:</label>
     <select id="colorSelect">
+
         <option value="">--Select Color--</option>
         <option>Red</option>
         <option>Green</option>
@@ -61,27 +59,20 @@ when the user selects a color or fruit.
         <option>Mango</option>
         <option>Orange</option>
     </select>
-
     <div id="output">Your selection will appear here.</div>
-
 </div>
 
 <script>
-
 window.onload = function () {
-
     let color = document.getElementById("colorSelect");
     let fruit = document.getElementById("fruitList");
     let output = document.getElementById("output");
-
     color.onchange = show;
     fruit.onchange = show;
 
     function show() {
-
         let selectedColor = color.value;
         let selectedFruit = fruit.value;
-
         if (selectedColor != "" && selectedFruit != "") {
             output.innerHTML = "Selected Color: " + selectedColor +
                                "<br>Selected Fruit: " + selectedFruit;
@@ -95,11 +86,8 @@ window.onload = function () {
         else {
             output.innerHTML = "Please select a color and a fruit.";
         }
-
     }
-
 };
-
 </script>
 
 </body>
