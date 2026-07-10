@@ -1,1 +1,52 @@
+Create and test an XHTML document that displays a table of football scores from a collegiate 
+football conference in which the team names
+have one of the primary colors of their respective schools. 
+The winning scores must appear larger and in a different font than the losing scores. 
+The team names must be in a script font.
 
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Scores</title>
+</head>
+
+<body>
+
+<h2>Collegiate Football Conference Scores</h2>
+
+<table border="1" cellpadding="8">
+
+<tr>
+    <th>Team</th>
+    <th>Score</th>
+</tr>
+
+<tr>
+    <td style="color:blue; font-family:cursive;">Blue Team</td>
+    <td style="font-size:20px; font-family:Arial;"><b>35</b></td>
+</tr>
+
+<tr>
+    <td style="color:red; font-family:cursive;">Red Team</td>
+    <td style="font-size:14px; font-family:'Times New Roman';">21</td>
+</tr>
+
+<tr>
+    <td style="color:green; font-family:cursive;">Green Team</td>
+    <td style="font-size:14px; font-family:'Times New Roman';">14</td>
+</tr>
+
+<tr>
+    <td style="color:gold; font-family:cursive;">Yellow Team</td>
+    <td style="font-size:20px; font-family:Arial;"><b>42</b></td>
+</tr>
+
+</table>
+
+</body>
+</html>
