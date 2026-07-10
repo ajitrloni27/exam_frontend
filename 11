@@ -1,3 +1,11 @@
+Create a styled HTML form using <fieldset> and <legend> that includes:
+• Radio buttons for gender selection
+• Checkboxes for selecting hobbies
+On clicking Submit, use JavaScript and a for loop to display the selected gender
+and hobbies.
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
