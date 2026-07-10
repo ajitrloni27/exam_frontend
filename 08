@@ -17,65 +17,52 @@ function validateForm() {
     let phone = document.getElementById("phone").value.trim();
     let dob = document.getElementById("dob").value;
     let course = document.getElementById("course").value;
+    let subjects = document.querySelectorAll('input[name="subjects"]:checked');
 
-    // Name
+
     if (name == "") {
         alert("Name cannot be empty");
-        document.getElementById("name").focus();
         return false;
     }
 
-    // Username
     if (username.length < 5) {
         alert("Username must be at least 5 characters");
-        document.getElementById("username").focus();
         return false;
     }
 
-    // Password
     if (password.length < 6) {
         alert("Password must be at least 6 characters");
-        document.getElementById("password").focus();
         return false;
     }
 
-    // Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert("Enter a valid email");
-        document.getElementById("email").focus();
         return false;
     }
 
-    // Phone
     const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(phone)) {
         alert("Enter a valid 10-digit phone number");
-        document.getElementById("phone").focus();
         return false;
     }
 
-    // Gender
     let gender = document.querySelector('input[name="gender"]:checked');
     if (!gender) {
         alert("Please select gender");
         return false;
     }
 
-    // Date of Birth
     if (dob == "") {
         alert("Please select date of birth");
         return false;
     }
 
-    // Course
     if (course == "") {
         alert("Please select a course");
         return false;
     }
 
-    // Subjects
-    let subjects = document.querySelectorAll('input[name="subjects"]:checked');
     if (subjects.length == 0) {
         alert("Please select at least one subject");
         return false;
