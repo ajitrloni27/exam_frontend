@@ -1,1 +1,70 @@
+Create a HTML form elements to design and implement a functional "Student Registration Form". Your form must collect the following user
+inputs using appropriate elements and attributes:
+(a)Full Name (b) Email Address (c) Username (d) Password (e) Gender selection (radio buttons) (f) Date of Birth 
+(g) Phone Number (h)Address(multiline text area) (i)Engineering Stream (dropdown/select list) (j)Preferred subjects (checkboxes) 
+(k) A "Register" button to submit the form
 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form>
+
+Full Name:
+<input type="text"><br><br>
+
+Email Address:
+<input type="email"><br><br>
+
+Username:
+<input type="text"><br><br>
+
+Password:
+<input type="password"><br><br>
+
+Gender:
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+<br><br>
+
+Date of Birth:
+<input type="date"><br><br>
+
+Phone Number:
+<input type="tel"><br><br>
+
+Address:<br>
+<textarea rows="4" cols="30"></textarea><br><br>
+
+Engineering Stream:
+<select>
+    <option>Computer Science</option>
+    <option>Information Science</option>
+    <option>Electronics</option>
+    <option>Mechanical</option>
+    <option>Civil</option>
+</select>
+<br><br>
+
+Preferred Subjects:<br>
+<input type="checkbox"> HTML
+<input type="checkbox"> C
+<input type="checkbox"> Java
+<input type="checkbox"> Python
+<br><br>
+
+<button>Register</button>
+
+</form>
+
+</body>
+</html>
