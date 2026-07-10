@@ -1,1 +1,152 @@
+Create an HTML/XHTML document to generate the following
+(i) Unordered List (ii) Ordered List (iii) Definition List
+*All the lists to contain at least 5 items
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Lists Example</title>
+</head>
+<body>
+
+    <!-- Unordered List -->
+    <h2>Unordered List - Fruits</h2>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>Grapes</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <h2>Ordered List - Colors</h2>
+    <ol>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li>Purple</li>
+    </ol>
+
+    <!-- Definition List -->
+    <h2>Definition List - Programming Languages</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language used to create the structure of web pages.</dd>
+
+        <dt>C</dt>
+        <dd>A general-purpose programming language used for system and application development.</dd>
+
+        <dt>C++</dt>
+        <dd>An object-oriented programming language developed as an extension of C.</dd>
+
+        <dt>Java</dt>
+        <dd>A platform-independent programming language used for web, mobile, and desktop applications.</dd>
+
+        <dt>Python</dt>
+        <dd>A high-level programming language known for its simple syntax and wide range of applications.</dd>
+    </dl>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create, test, and validate a HTML document to describe a table with the following contents: 
+The columns of the table must have the headings : Pine, Maple, Oak, and Fir. 
+The rows must have the labels : Average Height, Average Width, Typical Lifespan, and Leaf Type. 
+You can make up the data cell values.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree Information Table</title>
+</head>
+<body>
+
+    <h2>Tree Information Table</h2>
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Characteristics</th>
+            <th>Pine</th>
+            <th>Maple</th>
+            <th>Oak</th>
+            <th>Fir</th>
+        </tr>
+
+        <tr>
+            <th>Average Height</th>
+            <td>25 m</td>
+            <td>20 m</td>
+            <td>30 m</td>
+            <td>35 m</td>
+        </tr>
+
+        <tr>
+            <th>Average Width</th>
+            <td>8 m</td>
+            <td>10 m</td>
+            <td>15 m</td>
+            <td>7 m</td>
+        </tr>
+
+        <tr>
+            <th>Typical Lifespan</th>
+            <td>150 years</td>
+            <td>100 years</td>
+            <td>250 years</td>
+            <td>180 years</td>
+        </tr>
+
+        <tr>
+            <th>Leaf Type</th>
+            <td>Needle</td>
+            <td>Broadleaf</td>
+            <td>Broadleaf</td>
+            <td>Needle</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
