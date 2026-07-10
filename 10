@@ -13,55 +13,41 @@
     <title>Program 10</title>
 
     <style>
-        body {
-            font-family: Arial;
-            background: lightgray;
-        }
+
+      body{
+        background:lightyellow;
+       }
 
         .container {
-            width: 300px;
+            width: 350px;
             margin: auto;
             padding: 20px;
-            background: white;
-            border: 1px solid black;
-        }
-
-        input {
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        button {
-            margin-top: 10px;
-        }
-
-        #output {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid black;
+            border: 2px solid black;
+            text-align: center;
+            background:aqua;
         }
     </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<h2>Fibonacci and Factorial</h2>
+    <h2>Fibonacci and Factorial</h2>
 
-Enter Number (1-10):
+    Enter Number (1-10):<br><br>
 
-<input type="number" id="num">
+    <input type="number" id="num">
 
-<button onclick="show()">Submit</button>
+    <button onclick="show()">Submit</button>
 
-<div id="output"></div>
+    <br><br>
+
+    <div id="output"></div>
 
 </div>
 
 <script>
-
 function show() {
 
     let n = Number(document.getElementById("num").value);
@@ -72,7 +58,6 @@ function show() {
         return;
     }
 
-    // Fibonacci using while loop
     let a = 0;
     let b = 1;
     let i = 1;
@@ -86,7 +71,6 @@ function show() {
         i++;
     }
 
-    // Factorial using do-while loop
     let fact = 1;
     let j = 1;
 
@@ -98,10 +82,9 @@ function show() {
     output.innerHTML =
         "Fibonacci: " + fib +
         "<br>Factorial: " + fact;
-
 }
-
 </script>
 
 </body>
+</html>
 </html>
