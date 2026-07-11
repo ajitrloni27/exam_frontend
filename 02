@@ -1,1 +1,102 @@
+2a. Create an HTML/XHTML document to generate the following 
+(i) Add an Image 
+(ii) Create an Hypertext Link(anchor tag) for the image to direct about the description of the image. 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Link</title>
+</head>
+<body>
+<center>
+<h2>Car Image</h2>
+<a href="about.html"><img src="car.png.png" alt="thi is about teh Car image" width="300" height="200"></a>
+<p>Click the image to see its description.</p>
+</center>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Car</title>
+</head>
+<body>
+<h2>Car Description</h2>
+<p>This is a beautiful sports car.</p>
+<p>It is fast and comfortable.</p>
+<p>It has a powerful engine.</p>
+<p>Many people like this car.</p>
+<p>It is one of my favorite cars.</p>
+</body>
+</html>
+
+
+
+
+
+2b. Create, test, and validate an XHTML document that has two frames in one column. The top frame, 
+which must be 20 percent of the column, must have at least 2 links to other documents; the bottom 
+frame will display those documents. The links must be names of cars; the documents must be at least 
+five-line descriptions of the cars with its image.
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cars</title>
+</head>
+<frameset rows="20%,80%">
+    <frame src="menu.html">
+    <frame src="car1.html" name="main">
+</frameset>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
+</head>
+<body>
+<a href="car1.html" target="main">BMW</a><br><br>
+<a href="car2.html" target="main">Audi</a>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMW</title>
+</head>
+<body>
+<h2>BMW</h2>
+<img src="car.png.png" width="250">
+<p>BMW is a luxury car.</p>
+<p>It is made in Germany.</p>
+<p>It is very comfortable.</p>
+<p>It has a powerful engine.</p>
+<p>Many people like BMW.</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMW</title>
+</head>
+<body>
+<h2>BMW</h2>
+<img src="car.png.png" width="250">
+<p>BMW is a luxury car.</p>
+<p>It is made in Germany.</p>
+<p>It is very comfortable.</p>
+<p>It has a powerful engine.</p>
+<p>Many people like BMW.</p>
+</body>
+</html>
+
+
+
+
+
 
